@@ -97,23 +97,23 @@
       bindings = <&kp HASH>, <&kp KP_N0>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
   };
-  exclplus: excl_plus {
+  explus: excl_plus {
       compatible = "zmk,behavior-mod-morph";
-      label = "excl_prcnt";
+      label = "excl_plus";
       #binding-cells = <0>;
       bindings = <&kp EXCL>, <&kp PLUS>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
   };
   atcaret: at_caret {
       compatible = "zmk,behavior-mod-morph";
-      label = "excl_prcnt";
+      label = "at_caret";
       #binding-cells = <0>;
       bindings = <&kp AT>, <&kp CARET>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
   };
   dolprct: dollar_percent {
       compatible = "zmk,behavior-mod-morph";
-      label = "excl_prcnt";
+      label = "dollar_percent";
       #binding-cells = <0>;
       bindings = <&kp DOLLAR>, <&kp PERCENT>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -134,7 +134,7 @@
     };
     dvorak {
       bindings = <
-        &dolprct    &jkp_n1    &jkp_n2    &jkp_n3    &jkp_n4    &jkp_n5    &tog KPD                                                        &mo MODL     &jkp_n6    &jkp_n7    &jkp_n8       &jkp_n9      &jkp_n0      &exclplus   
+        &dolprct    &jkp_n1    &jkp_n2    &jkp_n3    &jkp_n4    &jkp_n5    &tog KPD                                                        &mo MODL        &jkp_n6    &jkp_n7    &jkp_n8       &jkp_n9      &jkp_n0      &explus
         &kp TAB     &kp SQT    &kp COMMA  &kp DOT    &kp P      &kp Y      &none                                                           &kp KP_MINUS &kp F      &kp G      &kp C         &kp R        &kp L        &kp BSLH
         &kp ESC     &kp A      &kp O      &kp E      &kp U      &kp I      &none          &trans &trans             &trans &trans          &kp KP_PLUS  &kp D      &kp H      &kp T         &kp N        &kp S        &kp MINUS
         &none       &kp SEMI   &kp Q      &kp J      &kp K      &kp X              &none  &none  &trans &none &none &trans &none  &none                 &kp B      &kp M      &kp W         &kp V        &kp Z        &none   
