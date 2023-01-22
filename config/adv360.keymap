@@ -55,18 +55,18 @@
       bindings = <&kp LEFT_PARENTHESIS>, <&kp KP_N4>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
   };
-  jkp_n5: amps_kp_n5 {
+  jkp_n5: equal_kp_n5 {
       compatible = "zmk,behavior-mod-morph";
       label = "amps_kp_n5";
       #binding-cells = <0>;
-      bindings = <&kp AMPS>, <&kp KP_N5>;
+      bindings = <&kp EQUAL>, <&kp KP_N5>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
   };
-  jkp_n6: equal_kp_n6 {
+  jkp_n6: amps_kp_n6 {
       compatible = "zmk,behavior-mod-morph";
       label = "equal_kp_n6";
       #binding-cells = <0>;
-      bindings = <&kp EQUAL>, <&kp KP_N6>;
+      bindings = <&kp AMPS>, <&kp KP_N6>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
   };
   jkp_n7: right_parenthesis_kp_n7 {
@@ -97,7 +97,7 @@
       bindings = <&kp HASH>, <&kp KP_N0>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
   };
-  expls: excl_plus {
+  exclplus: excl_plus {
       compatible = "zmk,behavior-mod-morph";
       label = "excl_prcnt";
       #binding-cells = <0>;
@@ -134,7 +134,7 @@
     };
     dvorak {
       bindings = <
-        &dolprct    &jkp_n1    &jkp_n2    &jkp_n3    &jkp_n4    &jkp_n5    &tog KPD                                                        &mo MODL     &jkp_n6    &jkp_n7    &jkp_n8       &jkp_n9      &jkp_n0      &expls   
+        &dolprct    &jkp_n1    &jkp_n2    &jkp_n3    &jkp_n4    &jkp_n5    &tog KPD                                                        &mo MODL     &jkp_n6    &jkp_n7    &jkp_n8       &jkp_n9      &jkp_n0      &exclplus   
         &kp TAB     &kp SQT    &kp COMMA  &kp DOT    &kp P      &kp Y      &none                                                           &kp KP_MINUS &kp F      &kp G      &kp C         &kp R        &kp L        &kp BSLH
         &kp ESC     &kp A      &kp O      &kp E      &kp U      &kp I      &none          &trans &trans             &trans &trans          &kp KP_PLUS  &kp D      &kp H      &kp T         &kp N        &kp S        &kp MINUS
         &none       &kp SEMI   &kp Q      &kp J      &kp K      &kp X              &none  &none  &trans &none &none &trans &none  &none                 &kp B      &kp M      &kp W         &kp V        &kp Z        &none   
