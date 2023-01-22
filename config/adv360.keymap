@@ -9,7 +9,7 @@
 #define DVRK    1
 #define KPD     2
 #define FNC     3
-#define MOD     4
+#define MODL    4
 
 
 / {
@@ -27,12 +27,105 @@
       };
     };
 
+  jkp_n1: star_kp_n1 {
+    compatible = "zmk,behavior-mod-morph";
+    label = "plus_kp_n1";
+    #binding-cells = <0>;
+    bindings = <&kp STAR>, <&kp KP_N1>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+  jkp_n2: left_bracket_kp_n2 {
+      compatible = "zmk,behavior-mod-morph";
+      label = "left_bracket_kp_n2";
+      #binding-cells = <0>;
+      bindings = <&kp LEFT_BRACKET>, <&kp KP_N2>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+  jkp_n3: left_brace_kp_n3 {
+      compatible = "zmk,behavior-mod-morph";
+      label = "left_brace_kp_n3";
+      #binding-cells = <0>;
+      bindings = <&kp LEFT_BRACE>, <&kp KP_N3>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+  jkp_n4: left_parenthesis_kp_n4 {
+      compatible = "zmk,behavior-mod-morph";
+      label = "left_parenthesis_kp_n4";
+      #binding-cells = <0>;
+      bindings = <&kp LEFT_PARENTHESIS>, <&kp KP_N4>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+  jkp_n5: amps_kp_n5 {
+      compatible = "zmk,behavior-mod-morph";
+      label = "amps_kp_n5";
+      #binding-cells = <0>;
+      bindings = <&kp AMPS>, <&kp KP_N5>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+  jkp_n6: equal_kp_n6 {
+      compatible = "zmk,behavior-mod-morph";
+      label = "equal_kp_n6";
+      #binding-cells = <0>;
+      bindings = <&kp EQUAL>, <&kp KP_N6>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+  jkp_n7: right_parenthesis_kp_n7 {
+      compatible = "zmk,behavior-mod-morph";
+      label = "right_parenthesis_kp_n7";
+      #binding-cells = <0>;
+      bindings = <&kp RIGHT_PARENTHESIS>, <&kp KP_N7>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+  jkp_n8: right_brace_kp_n8 {
+      compatible = "zmk,behavior-mod-morph";
+      label = "right_brace_kp_n8";
+      #binding-cells = <0>;
+      bindings = <&kp RIGHT_BRACE>, <&kp KP_N8>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+  jkp_n9: right_bracket_kp_n9 {
+      compatible = "zmk,behavior-mod-morph";
+      label = "right_bracket_kp_n9";
+      #binding-cells = <0>;
+      bindings = <&kp RIGHT_BRACKET>, <&kp KP_N9>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+  jkp_n0: star_kp_n0 {
+      compatible = "zmk,behavior-mod-morph";
+      label = "star_kp_n0";
+      #binding-cells = <0>;
+      bindings = <&kp HASH>, <&kp KP_N0>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+  expls: excl_plus {
+      compatible = "zmk,behavior-mod-morph";
+      label = "excl_prcnt";
+      #binding-cells = <0>;
+      bindings = <&kp EXCL>, <&kp PLUS>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+  atcaret: at_caret {
+      compatible = "zmk,behavior-mod-morph";
+      label = "excl_prcnt";
+      #binding-cells = <0>;
+      bindings = <&kp AT>, <&kp CARET>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+  dolprct: dollar_percent {
+      compatible = "zmk,behavior-mod-morph";
+      label = "excl_prcnt";
+      #binding-cells = <0>;
+      bindings = <&kp DOLLAR>, <&kp PERCENT>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+
+
   keymap {
     compatible = "zmk,keymap";
 
     default_layer {
       bindings = <
-        &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &tog KPD                                                                           &mo 3 &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
+        &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &tog KPD                                                                           &mo MODL &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
         &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                                              &none &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
         &kp ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &none             &kp LGUI  &kp ENTER                &kp LSHFT &kp LGUI            &none &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
         &none     &kp Z     &kp X    &kp C    &kp V      &kp B          &none     &none     &kp K_VOL_UP &none &none &kp LALT  &none     &none           &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &none   
@@ -41,16 +134,16 @@
     };
     dvorak {
       bindings = <
-        &none     &kp N1    &kp N2    &kp N3   &kp N4     &kp N5 &tog KPD                                                        &mo 3 &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &none   
-        &kp TAB   &kp SQT   &kp COMMA &kp DOT  &kp P      &kp Y  &none                                                           &none &kp F  &kp G  &kp C     &kp R    &kp L    &kp BSLH
-        &kp ESC   &kp A     &kp O     &kp E    &kp U      &kp I  &none          &trans &trans             &trans &trans          &none &kp D  &kp H  &kp T     &kp N    &kp S    &kp MINUS
-        &none     &kp SEMI  &kp Q     &kp J    &kp K      &kp X          &none  &none  &trans &none &none &trans &none  &none          &kp B  &kp M  &kp W     &kp V    &kp Z    &none   
-        &mo FNC   &kp GRAVE &kp LGUI  &kp LEFT &kp RIGHT                 &trans &trans &trans             &trans &trans &trans                &kp UP &kp DOWN  &kp FSLH &kp RBKT &mo FNC
+        &dolprct    &jkp_n1    &jkp_n2    &jkp_n3    &jkp_n4    &jkp_n5    &tog KPD                                                        &mo MODL        &jkp_n6    &jkp_n7    &jkp_n8       &jkp_n9      &jkp_n0      &expls   
+        &kp TAB     &kp SQT    &kp COMMA  &kp DOT    &kp P      &kp Y      &none                                                           &kp KP_MINUS &kp F      &kp G      &kp C         &kp R        &kp L        &kp BSLH
+        &kp ESC     &kp A      &kp O      &kp E      &kp U      &kp I      &none          &trans &trans             &trans &trans          &kp KP_PLUS  &kp D      &kp H      &kp T         &kp N        &kp S        &kp MINUS
+        &none       &kp SEMI   &kp Q      &kp J      &kp K      &kp X              &none  &none  &trans &none &none &trans &none  &none                 &kp B      &kp M      &kp W         &kp V        &kp Z        &none   
+        &mo FNC     &kp GRAVE  &kp DEL   &kp LEFT   &kp RIGHT                     &trans &trans &trans             &trans &trans &trans                           &kp UP     &kp DOWN      &kp FSLH     &atcaret     &mo FNC
       >;
     };
     KPD {
       bindings = <
-        &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &trans                                                                       &mo 3 &kp N6 &kp KP_NUM &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &kp MINUS
+        &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &trans                                                                       &mo MODL &kp N6 &kp KP_NUM &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &kp MINUS
         &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                                        &none &kp Y  &kp KP_N7  &kp KP_N8    &kp KP_N9     &kp KP_MINUS    &kp BSLH
         &kp ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &none           &kp LCTRL &kp LALT             &kp LGUI  &kp RCTRL           &none &kp H  &kp KP_N4  &kp KP_N5    &kp KP_N6     &kp KP_PLUS     &kp SQT
         &none     &kp Z     &kp X    &kp C    &kp V      &kp B         &none    &none     &kp HOME &none &none &kp PG_UP &none     &none           &kp N  &kp KP_N1  &kp KP_N2    &kp KP_N3     &kp KP_ENTER    &none    
@@ -68,11 +161,11 @@
     };
     mod {
       bindings = <
-        &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &tog DVRK                                                                                                      &trans                 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none
+        &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none                                                                                                      &trans                 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none
         &none &none        &none        &none        &none        &none        &bootloader                                                                                                    &bootloader            &none        &none        &none        &none        &none        &none
         &none &none        &none        &none        &none        &none        &rgb_ug RGB_MEFS_CMD 5                 &bt BT_CLR &bt BT_CLR             &bt BT_CLR &bt BT_CLR                 &rgb_ug RGB_MEFS_CMD 5 &none        &none        &none        &none        &none        &none
         &none &none        &none        &none        &none        &none                               &none           &none      &none      &none &none &none      &none      &none                                  &none        &none        &none        &none        &none        &none
-        &none &none        &none        &bl BL_INC   &bl BL_DEC                                       &rgb_ug RGB_TOG &bl BL_TOG &none                  &none      &bl BL_TOG &rgb_ug RGB_TOG                                     &bl BL_INC   &bl BL_DEC   &none        &none        &none
+        &tog DVRK &none        &none        &bl BL_INC   &bl BL_DEC                                       &rgb_ug RGB_TOG &bl BL_TOG &none                  &none      &bl BL_TOG &rgb_ug RGB_TOG                                     &bl BL_INC   &bl BL_DEC   &none        &none        &none
       >;
     };
   };
