@@ -143,11 +143,11 @@
 
     dvorak {
       bindings = <
-        &dolprct    &jkp_n1    &jkp_n2    &jkp_n3    &jkp_n4    &jkp_n5    &kp LG(LS(LC(N4)))                                                                &mo MODL     &jkp_n6    &jkp_n7    &jkp_n8       &jkp_n9      &jkp_n0      &explus
-        &kp TAB     &kp SQT    &kp COMMA  &kp DOT    &kp P      &kp Y      &kp LG(C)                                                                         &kp KP_MINUS &kp F      &kp G      &kp C         &kp R        &kp L        &kp BSLH
-        &kp ESC     &kp A      &kp O      &kp E      &kp U      &kp I      &kp LG(V)         &cmdlayer &kp LALT              &kp LSHFT &cmdlayer             &kp KP_PLUS  &kp D      &kp H      &kp T         &kp N        &kp S        &kp MINUS
-        &kp SQT     &kp SEMI   &kp Q      &kp J      &kp K      &kp X              &none     &none     &kp LALT  &none &none &kp LALT  &none     &none                    &kp B      &kp M      &kp W         &kp V        &kp Z        &kp EQUAL   
-        &mo FNC     &kp GRAVE  &kp DEL    &kp LEFT   &kp RIGHT                     &kp LSHFT &kp BSPC  &kp LCTRL             &kp LCTRL &kp ENTER &kp SPACE                           &kp UP     &kp DOWN      &kp FSLH     &atcaret     &mo FNC
+        &dolprct    &jkp_n1    &jkp_n2    &jkp_n3    &jkp_n4    &jkp_n5    &kp LG(LS(LC(N4)))                                                                    &mo MODL     &jkp_n6    &jkp_n7    &jkp_n8       &jkp_n9      &jkp_n0      &explus
+        &kp TAB     &kp SQT    &kp COMMA  &kp DOT    &kp P      &kp Y      &kp LG(C)                                                                             &kp KP_MINUS &kp F      &kp G      &kp C         &kp R        &kp L        &kp BSLH
+        &kp ESC     &kp A      &kp O      &kp E      &kp U      &kp I      &kp LG(V)             &cmdlayer &kp LALT              &kp LSHFT &cmdlayer             &kp KP_PLUS  &kp D      &kp H      &kp T         &kp N        &kp S        &kp MINUS
+        &kp SQT     &kp SEMI   &kp Q      &kp J      &kp K      &kp X                  &none     &none     &kp LALT  &none &none &kp LALT  &none     &none                    &kp B      &kp M      &kp W         &kp V        &kp Z        &kp EQUAL   
+        &mo FNC     &kp GRAVE  &kp DEL    &kp LEFT   &kp RIGHT                         &kp LSHFT &kp BSPC  &kp LCTRL             &kp LCTRL &kp ENTER &kp SPACE                           &kp UP     &kp DOWN      &kp FSLH     &atcaret     &mo FNC
       >;
     };
     mod {
@@ -158,17 +158,18 @@
         &none     &none        &none        &none        &none        &none                               &none           &none      &none      &none &none &none      &none      &none                                  &none        &none        &none        &none        &none        &none
         &none     &tog DOTA    &none        &bl BL_INC   &bl BL_DEC                                       &rgb_ug RGB_TOG &bl BL_TOG &none                  &none      &bl BL_TOG &rgb_ug RGB_TOG                                     &bl BL_INC   &bl BL_DEC   &none        &none        &none
       >;
-    };
+    };asdwwwwwasdasdfasd
 
     cmd {
       bindings = <
-        &kp KP_MINUS &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &trans                                                            &trans &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp KP_PLUS 
-        &trans       &trans &trans &trans &trans &trans &kp TAB                                                           &trans &trans &trans &trans &trans &trans &trans 
-        &trans       &trans &trans &trans &trans &trans &kp LSHIFT      &trans &trans             &trans &trans           &trans &trans &trans &trans &trans &trans &trans 
-        &trans       &trans &trans &trans &trans &trans          &trans &trans &trans &none &none &trans &trans &trans           &trans &trans &trans &trans &trans &trans 
-        &trans       &trans &trans &trans &trans                 &trans &trans &trans             &trans &trans &trans                  &trans &trans &trans &trans &trans 
+        &kp KP_MINUS &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &trans                                                                     &trans &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp KP_PLUS 
+        &trans       &trans &trans &trans &trans &trans &kp TAB                                                                    &trans &trans &trans &trans &trans &trans &trans 
+        &trans       &trans &trans &trans &trans &trans &kp TAB               &trans &trans             &trans &trans              &trans &trans &trans &trans &trans &trans &trans 
+        &trans       &trans &trans &trans &trans &trans                &trans &trans &trans &none &none &trans &trans &trans              &trans &trans &trans &trans &trans &trans 
+        &trans       &trans &trans &trans &trans                       &trans &trans &trans             &trans &trans &trans                     &trans &trans &trans &trans &trans 
       >;
     };
+    
     dota_layer {
       bindings = <
         &kp B     &kp F4    &kp N1   &kp N2   &kp N3    &kp N4 &kp N5                                                                               &mo MODL &kp N6 &kp N7   &kp N8    &kp N9    &kp N0   &kp MINUS
@@ -183,8 +184,8 @@
         &kp F12 &kp F1 &kp F2   &kp F3 &kp F4 &kp F5  &none                                                       &trans &kp F6 &kp F7 &kp F8 &kp F9  &kp F10 &kp F11
         &trans  &trans &trans   &trans &trans &trans  &none                                                       &none  &trans &trans &trans &trans  &trans  &trans
         &trans  &trans &trans   &trans &trans &trans  &none        &trans &trans             &trans &trans        &none  &trans &trans &trans &trans  &trans  &trans
-        &trans  &trans &trans   &trans &trans &trans        &none  &none  &trans &none &none &trans &none  &none         &trans &trans &trans &trans  &trans  &trans
-        &trans  &trans &kp CAPS &trans &trans               &trans &trans &trans             &trans &trans &trans               &trans &trans &trans  &trans  &trans
+        &trans  &trans &trans   &trans &trans &trans        &trans &trans &trans &none &none &trans &trans &trans        &trans &trans &trans &trans  &trans  &trans
+        &trans  &trans &trans   &trans &trans               &trans &trans &trans             &trans &trans &trans               &trans &trans &trans  &trans  &trans
       >;
     };
 
