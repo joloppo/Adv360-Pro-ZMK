@@ -5,11 +5,12 @@
 #include <dt-bindings/zmk/backlight.h>
 
 
-#define DEFAULT 0
-#define DVRK    1
-#define KPD     2
-#define FNC     3
-#define MODL    4
+// #define DEFAULT 0
+#define DOTA    3
+#define DVRK    0
+#define CMDL    2
+#define FNC     4
+#define MODL    1
 
 
 / {
@@ -32,131 +33,121 @@
     label = "plus_kp_n1";
     #binding-cells = <0>;
     bindings = <&kp STAR>, <&kp KP_N1>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
+    mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
   };
   jkp_n2: left_bracket_kp_n2 {
       compatible = "zmk,behavior-mod-morph";
       label = "left_bracket_kp_n2";
       #binding-cells = <0>;
       bindings = <&kp LEFT_BRACKET>, <&kp KP_N2>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
+      mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
   };
   jkp_n3: left_brace_kp_n3 {
       compatible = "zmk,behavior-mod-morph";
       label = "left_brace_kp_n3";
       #binding-cells = <0>;
       bindings = <&kp LEFT_BRACE>, <&kp KP_N3>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
+      mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
   };
   jkp_n4: left_parenthesis_kp_n4 {
       compatible = "zmk,behavior-mod-morph";
       label = "left_parenthesis_kp_n4";
       #binding-cells = <0>;
       bindings = <&kp LEFT_PARENTHESIS>, <&kp KP_N4>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
+      mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
   };
   jkp_n5: equal_kp_n5 {
       compatible = "zmk,behavior-mod-morph";
       label = "amps_kp_n5";
       #binding-cells = <0>;
       bindings = <&kp EQUAL>, <&kp KP_N5>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
+      mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
   };
   jkp_n6: amps_kp_n6 {
       compatible = "zmk,behavior-mod-morph";
       label = "equal_kp_n6";
       #binding-cells = <0>;
       bindings = <&kp AMPS>, <&kp KP_N6>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
+      mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
   };
   jkp_n7: right_parenthesis_kp_n7 {
       compatible = "zmk,behavior-mod-morph";
       label = "right_parenthesis_kp_n7";
       #binding-cells = <0>;
       bindings = <&kp RIGHT_PARENTHESIS>, <&kp KP_N7>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
+      mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
   };
   jkp_n8: right_brace_kp_n8 {
       compatible = "zmk,behavior-mod-morph";
       label = "right_brace_kp_n8";
       #binding-cells = <0>;
       bindings = <&kp RIGHT_BRACE>, <&kp KP_N8>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
+      mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
   };
   jkp_n9: right_bracket_kp_n9 {
       compatible = "zmk,behavior-mod-morph";
       label = "right_bracket_kp_n9";
       #binding-cells = <0>;
       bindings = <&kp RIGHT_BRACKET>, <&kp KP_N9>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
+      mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
   };
   jkp_n0: star_kp_n0 {
       compatible = "zmk,behavior-mod-morph";
       label = "star_kp_n0";
       #binding-cells = <0>;
       bindings = <&kp HASH>, <&kp KP_N0>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
+      mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
   };
   explus: excl_plus {
       compatible = "zmk,behavior-mod-morph";
       label = "excl_plus";
       #binding-cells = <0>;
       bindings = <&kp EXCL>, <&kp PLUS>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
+      mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
   };
   atcaret: at_caret {
       compatible = "zmk,behavior-mod-morph";
       label = "at_caret";
       #binding-cells = <0>;
       bindings = <&kp AT>, <&kp CARET>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
+      mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
   };
   dolprct: dollar_percent {
       compatible = "zmk,behavior-mod-morph";
       label = "dollar_percent";
       #binding-cells = <0>;
       bindings = <&kp DOLLAR>, <&kp PERCENT>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
+      mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
   };
-
+  cmdlayer: cmd_layer {
+      compatible = "zmk,behavior-macro";
+      label = "cmd_layer";
+      #binding-cells = <0>;
+      bindings = <&macro_press &mo CMDL &kp LGUI>
+        , <&macro_pause_for_release>
+        , <&macro_release &mo CMDL &kp LGUI>;
+  };
 
   keymap {
     compatible = "zmk,keymap";
 
-    default_layer {
-      bindings = <
-        &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &tog KPD                                                                        &mo MODL &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
-        &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                                           &none    &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
-        &kp ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &none             &kp LGUI  &kp ENTER             &kp LSHFT &kp LGUI            &none    &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
-        &none     &kp Z     &kp X    &kp C    &kp V      &kp B          &none     &none     &kp LSHFT &none &none &kp LALT  &none     &none              &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &none   
-        &mo FNC   &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT                 &kp LSHFT &kp BSPC  &kp LALT              &kp LCTRL &kp ENTER &kp SPACE                 &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo FNC
-      >;
-    };
+    // default_layer {
+    //   bindings = <
+    //     &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &none                                                                           &mo MODL &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
+    //     &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                                           &none    &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
+    //     &kp ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &none             &kp LGUI  &kp LALT              &kp LSHFT &kp LGUI            &none    &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
+    //     &none     &kp Z     &kp X    &kp C    &kp V      &kp B          &none     &none     &kp LALT  &none &none &kp LALT  &none     &none              &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &none   
+    //     &mo FNC   &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT                 &kp LSHFT &kp BSPC  &kp LCTRL             &kp LCTRL &kp ENTER &kp SPACE                 &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo FNC
+    //   >;
+    // };
+
     dvorak {
       bindings = <
-        &dolprct    &jkp_n1    &jkp_n2    &jkp_n3    &jkp_n4    &jkp_n5    &tog KPD                                                        &mo MODL        &jkp_n6    &jkp_n7    &jkp_n8       &jkp_n9      &jkp_n0      &explus
-        &kp TAB     &kp SQT    &kp COMMA  &kp DOT    &kp P      &kp Y      &none                                                           &kp KP_MINUS &kp F      &kp G      &kp C         &kp R        &kp L        &kp BSLH
-        &kp ESC     &kp A      &kp O      &kp E      &kp U      &kp I      &none          &trans &trans             &trans &trans          &kp KP_PLUS  &kp D      &kp H      &kp T         &kp N        &kp S        &kp MINUS
-        &none       &kp SEMI   &kp Q      &kp J      &kp K      &kp X              &none  &none  &trans &none &none &trans &none  &none                 &kp B      &kp M      &kp W         &kp V        &kp Z        &none   
-        &mo FNC     &kp GRAVE  &kp DEL    &kp LEFT   &kp RIGHT                     &trans &trans &trans             &trans &trans &trans                           &kp UP     &kp DOWN      &kp FSLH     &atcaret     &mo FNC
-      >;
-    };
-    KPD {
-      bindings = <
-        &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &trans                                                                       &mo MODL &kp N6 &kp KP_NUM &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &kp MINUS
-        &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                                        &none    &kp Y  &kp KP_N7  &kp KP_N8    &kp KP_N9     &kp KP_MINUS    &kp BSLH
-        &kp ESC   &kp A     &kp S    &kp D    &kp F      &kp G  &none           &kp LCTRL &kp LALT             &kp LGUI  &kp RCTRL           &none    &kp H  &kp KP_N4  &kp KP_N5    &kp KP_N6     &kp KP_PLUS     &kp SQT
-        &none     &kp Z     &kp X    &kp C    &kp V      &kp B         &none    &none     &kp HOME &none &none &kp PG_UP &none     &none              &kp N  &kp KP_N1  &kp KP_N2    &kp KP_N3     &kp KP_ENTER    &none    
-        &mo FNC   &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT                &kp BSPC &kp DEL   &kp END              &kp PG_DN &kp ENTER &kp KP_N0                 &kp UP     &kp DOWN     &kp KP_DOT    &kp RBKT        &mo FNC
-      >;
-    };
-    fn {
-      bindings = <
-        &kp F12 &kp F1 &kp F2   &kp F3 &kp F4 &kp F5  &tog KPD                                                    &trans &kp F6 &kp F7 &kp F8 &kp F9  &kp F10 &kp F11
-        &trans  &trans &trans   &trans &trans &trans  &none                                                       &none  &trans &trans &trans &trans  &trans  &trans
-        &trans  &trans &trans   &trans &trans &trans  &none        &trans &trans             &trans &trans        &none  &trans &trans &trans &trans  &trans  &trans
-        &trans  &trans &trans   &trans &trans &trans        &none  &none  &trans &none &none &trans &none  &none         &trans &trans &trans &trans  &trans  &trans
-        &trans  &trans &kp CAPS &trans &trans               &trans &trans &trans             &trans &trans &trans               &trans &trans &trans  &trans  &trans
+        &dolprct    &jkp_n1    &jkp_n2    &jkp_n3    &jkp_n4    &jkp_n5    &none                                                                             &mo MODL     &jkp_n6    &jkp_n7    &jkp_n8       &jkp_n9      &jkp_n0      &explus
+        &kp TAB     &kp SQT    &kp COMMA  &kp DOT    &kp P      &kp Y      &kp K_COPY                                                                        &kp KP_MINUS &kp F      &kp G      &kp C         &kp R        &kp L        &kp BSLH
+        &kp ESC     &kp A      &kp O      &kp E      &kp U      &kp I      &kp K_PASTE       &cmdlayer &kp LALT              &kp LSHFT &cmdlayer             &kp KP_PLUS  &kp D      &kp H      &kp T         &kp N        &kp S        &kp MINUS
+        &none       &kp SEMI   &kp Q      &kp J      &kp K      &kp X              &none     &none     &kp LALT  &none &none &kp LALT  &none     &none                    &kp B      &kp M      &kp W         &kp V        &kp Z        &none   
+        &mo FNC     &kp GRAVE  &kp DEL    &kp LEFT   &kp RIGHT                     &kp LSHFT &kp BSPC  &kp LCTRL             &kp LCTRL &kp ENTER &kp SPACE                           &kp UP     &kp DOWN      &kp FSLH     &atcaret     &mo FNC
       >;
     };
     mod {
@@ -165,8 +156,53 @@
         &none     &none        &none        &none        &none        &none        &bootloader                                                                                                    &bootloader            &none        &none        &none        &none        &none        &none
         &none     &none        &none        &none        &none        &none        &rgb_ug RGB_MEFS_CMD 5                 &bt BT_CLR &bt BT_CLR             &bt BT_CLR &bt BT_CLR                 &rgb_ug RGB_MEFS_CMD 5 &none        &none        &none        &none        &none        &none
         &none     &none        &none        &none        &none        &none                               &none           &none      &none      &none &none &none      &none      &none                                  &none        &none        &none        &none        &none        &none
-        &tog DVRK &none        &none        &bl BL_INC   &bl BL_DEC                                       &rgb_ug RGB_TOG &bl BL_TOG &none                  &none      &bl BL_TOG &rgb_ug RGB_TOG                                     &bl BL_INC   &bl BL_DEC   &none        &none        &none
+        &none     &tog DOTA    &none        &bl BL_INC   &bl BL_DEC                                       &rgb_ug RGB_TOG &bl BL_TOG &none                  &none      &bl BL_TOG &rgb_ug RGB_TOG                                     &bl BL_INC   &bl BL_DEC   &none        &none        &none
       >;
     };
+
+    cmd {
+      bindings = <
+        &trans &trans &trans &trans &kp N4 &trans &trans                                                            &trans &trans &trans &trans &trans &trans &trans 
+        &trans &trans &trans &trans &trans &trans &kp TAB                                                           &trans &trans &trans &trans &trans &trans &trans 
+        &trans &trans &trans &trans &trans &trans &kp LSHIFT      &trans &trans             &trans &trans           &trans &trans &trans &trans &trans &trans &trans 
+        &trans &trans &trans &trans &trans &trans          &trans &trans &trans &none &none &trans &trans &trans           &trans &trans &trans &trans &trans &trans 
+        &trans &trans &trans &trans &trans                 &trans &trans &trans             &trans &trans &trans                  &trans &trans &trans &trans &trans 
+      >;
+    };
+    dota_layer {
+      bindings = <
+        &kp B     &kp F4    &kp N1   &kp N2   &kp N3    &kp N4 &kp N5                                                                               &mo MODL &kp N6 &kp N7   &kp N8    &kp N9    &kp N0   &kp MINUS
+        &kp TAB   &kp TAB   &kp Q    &kp W    &kp E     &kp R  &kp T                                                                                &none    &kp Y  &kp U    &kp UP    &kp O     &kp P    &kp BSLH
+        &kp ESC   &kp F1    &kp A    &kp S    &kp D     &kp F  &kp G                  &trans    &trans                &trans    &trans              &none    &kp H  &kp LEFT &kp DOWN  &kp RIGHT &kp SEMI &kp SQT
+        &kp F2    &kp LCTRL &kp Z    &kp X    &kp C     &kp V               &none     &none     &trans    &none &none &trans    &none     &none              &kp N  &kp M    &kp COMMA &kp DOT   &kp FSLH &none   
+        &mo FNC   &kp F2    &kp F3   &kp END  &kp B                         &kp SPACE &kp LALT  &trans                &trans    &trans    &trans                    &kp UP   &kp DOWN  &kp LBKT  &kp RBKT &mo FNC
+      >;
+    };
+    fn {
+      bindings = <
+        &kp F12 &kp F1 &kp F2   &kp F3 &kp F4 &kp F5  &none                                                       &trans &kp F6 &kp F7 &kp F8 &kp F9  &kp F10 &kp F11
+        &trans  &trans &trans   &trans &trans &trans  &none                                                       &none  &trans &trans &trans &trans  &trans  &trans
+        &trans  &trans &trans   &trans &trans &trans  &none        &trans &trans             &trans &trans        &none  &trans &trans &trans &trans  &trans  &trans
+        &trans  &trans &trans   &trans &trans &trans        &none  &none  &trans &none &none &trans &none  &none         &trans &trans &trans &trans  &trans  &trans
+        &trans  &trans &kp CAPS &trans &trans               &trans &trans &trans             &trans &trans &trans               &trans &trans &trans  &trans  &trans
+      >;
+    };
+
+
+
+
+
+
   };
 };
+/*
+    GHOST {
+      bindings = <
+        &trans &trans &trans &trans &trans &trans &trans                                                            &trans &trans &trans &trans &trans &trans &trans 
+        &trans &trans &trans &trans &trans &trans &trans                                                            &trans &trans &trans &trans &trans &trans &trans 
+        &trans &trans &trans &trans &trans &trans &trans          &trans &trans             &trans &trans           &trans &trans &trans &trans &trans &trans &trans 
+        &trans &trans &trans &trans &trans &trans          &trans &trans &trans &none &none &trans &trans &trans           &trans &trans &trans &trans &trans &trans 
+        &trans &trans &trans &trans &trans                 &trans &trans &trans             &trans &trans &trans                  &trans &trans &trans &trans &trans 
+      >;
+    };
+*/
