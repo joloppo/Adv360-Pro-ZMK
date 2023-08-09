@@ -143,10 +143,10 @@
 
     dvorak {
       bindings = <
-        &dolprct    &jkp_n1    &jkp_n2    &jkp_n3    &jkp_n4    &jkp_n5    &none                                                                             &mo MODL     &jkp_n6    &jkp_n7    &jkp_n8       &jkp_n9      &jkp_n0      &explus
-        &kp TAB     &kp SQT    &kp COMMA  &kp DOT    &kp P      &kp Y      &kp K_COPY                                                                        &kp KP_MINUS &kp F      &kp G      &kp C         &kp R        &kp L        &kp BSLH
-        &kp ESC     &kp A      &kp O      &kp E      &kp U      &kp I      &kp K_PASTE       &cmdlayer &kp LALT              &kp LSHFT &cmdlayer             &kp KP_PLUS  &kp D      &kp H      &kp T         &kp N        &kp S        &kp MINUS
-        &none       &kp SEMI   &kp Q      &kp J      &kp K      &kp X              &none     &none     &kp LALT  &none &none &kp LALT  &none     &none                    &kp B      &kp M      &kp W         &kp V        &kp Z        &none   
+        &dolprct    &jkp_n1    &jkp_n2    &jkp_n3    &jkp_n4    &jkp_n5    &kp LG(LS(LC(N4)))                                                                &mo MODL     &jkp_n6    &jkp_n7    &jkp_n8       &jkp_n9      &jkp_n0      &explus
+        &kp TAB     &kp SQT    &kp COMMA  &kp DOT    &kp P      &kp Y      &kp LG(C)                                                                         &kp KP_MINUS &kp F      &kp G      &kp C         &kp R        &kp L        &kp BSLH
+        &kp ESC     &kp A      &kp O      &kp E      &kp U      &kp I      &kp LG(V)         &cmdlayer &kp LALT              &kp LSHFT &cmdlayer             &kp KP_PLUS  &kp D      &kp H      &kp T         &kp N        &kp S        &kp MINUS
+        &kp SQT     &kp SEMI   &kp Q      &kp J      &kp K      &kp X              &none     &none     &kp LALT  &none &none &kp LALT  &none     &none                    &kp B      &kp M      &kp W         &kp V        &kp Z        &kp EQUAL   
         &mo FNC     &kp GRAVE  &kp DEL    &kp LEFT   &kp RIGHT                     &kp LSHFT &kp BSPC  &kp LCTRL             &kp LCTRL &kp ENTER &kp SPACE                           &kp UP     &kp DOWN      &kp FSLH     &atcaret     &mo FNC
       >;
     };
@@ -162,11 +162,11 @@
 
     cmd {
       bindings = <
-        &trans &trans &trans &trans &kp N4 &trans &trans                                                            &trans &trans &trans &trans &trans &trans &trans 
-        &trans &trans &trans &trans &trans &trans &kp TAB                                                           &trans &trans &trans &trans &trans &trans &trans 
-        &trans &trans &trans &trans &trans &trans &kp LSHIFT      &trans &trans             &trans &trans           &trans &trans &trans &trans &trans &trans &trans 
-        &trans &trans &trans &trans &trans &trans          &trans &trans &trans &none &none &trans &trans &trans           &trans &trans &trans &trans &trans &trans 
-        &trans &trans &trans &trans &trans                 &trans &trans &trans             &trans &trans &trans                  &trans &trans &trans &trans &trans 
+        &kp KP_MINUS &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &trans                                                            &trans &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp KP_PLUS 
+        &trans       &trans &trans &trans &trans &trans &kp TAB                                                           &trans &trans &trans &trans &trans &trans &trans 
+        &trans       &trans &trans &trans &trans &trans &kp LSHIFT      &trans &trans             &trans &trans           &trans &trans &trans &trans &trans &trans &trans 
+        &trans       &trans &trans &trans &trans &trans          &trans &trans &trans &none &none &trans &trans &trans           &trans &trans &trans &trans &trans &trans 
+        &trans       &trans &trans &trans &trans                 &trans &trans &trans             &trans &trans &trans                  &trans &trans &trans &trans &trans 
       >;
     };
     dota_layer {
